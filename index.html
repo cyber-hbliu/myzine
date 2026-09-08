@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHUAN DUAN — Selected Zines</title>
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="archive">
+    <header class="masthead">
+      <a class="identity" href="#shelf">CHUAN<br>DUAN</a>
+      <p class="edition">IMAGE ARCHIVE<br>2021—2026</p>
+      <button class="about-trigger" id="infoButton" aria-controls="about" aria-expanded="false">ABOUT&nbsp; ↗</button>
+    </header>
+
+    <section class="about" id="about" hidden>
+      <p>Photography, fragments and editions. A growing shelf of projects made to be held, revisited and read sideways.</p>
+    </section>
+
+    <section class="shelf-section" id="shelf" aria-label="Selected zines">
+      <div class="intro-line"><span>SELECTED EDITIONS</span><span>CLICK A SPINE TO ENTER</span></div>
+      <div class="bookshelf" role="list">
+        <button class="book b1" data-zine="0" role="listitem" aria-label="Open zine 01, After the rain"><span>01</span><strong>AFTER<br>THE RAIN</strong><i>2024</i></button>
+        <button class="book b2" data-zine="1" role="listitem" aria-label="Open zine 02, Angel's share"><span>02</span><strong>ANGEL'S<br>SHARE</strong><i>2023</i></button>
+        <button class="book b3" data-zine="2" role="listitem" aria-label="Open zine 03, From a distance"><span>03</span><strong>FROM A<br>DISTANCE</strong><i>2025</i></button>
+        <button class="book b4" data-zine="3" role="listitem" aria-label="Open zine 04, Untitled studies"><span>04</span><strong>UNTITLED<br>STUDIES</strong><i>2022</i></button>
+        <button class="book b5" data-zine="4" role="listitem" aria-label="Open zine 05, A softer error"><span>05</span><strong>A SOFTER<br>ERROR</strong><i>2026</i></button>
+        <div class="shelf-plank" aria-hidden="true"></div>
+      </div>
+      <div class="archive-meta"><span>FIVE EDITIONS / ONGOING</span><span>SCROLLING IS NOT LOOKING</span></div>
+    </section>
+
+    <footer><span>© CHUAN DUAN</span><span>TAIPEI / EVERYWHERE</span><span>WORKS ARE © THE ARTIST</span></footer>
+  </main>
+
+  <dialog class="reader" id="reader" aria-label="Zine reader">
+    <header class="reader-header"><button id="closeReader" aria-label="Close reader">CLOSE ×</button><p id="readerTitle"></p><p id="pageCount"></p></header>
+    <div class="zine-stage">
+      <button class="edge edge-left" id="prevPage" aria-label="Previous spread"></button>
+      <article class="zine" id="zine"><section class="page page-left" id="leftPage"></section><section class="page page-right" id="rightPage"></section><div class="fold"></div></article>
+      <button class="edge edge-right" id="nextPage" aria-label="Next spread"></button>
+    </div>
+    <footer class="reader-footer"><p>← / → &nbsp; TO TURN</p><div><button id="prevButton">PREV</button><button id="nextButton">NEXT</button></div></footer>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
